@@ -50,7 +50,7 @@ class ControllerBasic{
                 where: { id: id }
             });
             if (deleted) {
-                res.status(200).json({ message: 'Basic berhasil dihapus' });
+                res.status(200).json({ message: 'Basic berhasil dihapus...' });
             } else {
                 next({ name: 'NotFound' });
             }
