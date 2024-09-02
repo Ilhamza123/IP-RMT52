@@ -3,7 +3,7 @@ const axiosInstances = require('../config/axiosInstance');
 class AxiosInstance {
     static async GetRanking(req, res) {
         try {
-            console.log('Tunggu masuk dulu broo!!! ke API...');
+            console.log('Tunggu masuk dulu broo!!! ke API..');
             const { data } = await axiosInstances({
                 method: 'GET',
                 headers: {
