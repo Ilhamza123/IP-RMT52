@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
   Teknik.init({
     cardTitle: DataTypes.STRING,
     cardText: DataTypes.STRING,
-    BasicId: DataTypes.STRING
+    BasicId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Teknik',

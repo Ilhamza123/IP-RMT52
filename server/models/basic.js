@@ -11,8 +11,12 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // Definisikan asosiasi di sini
-      Basic.belongsTo(models.User, { foreignKey: 'UserId' });
-      Basic.belongsTo(models.Belt, { foreignKey: 'BeltId' });
+      Basic.belongsTo(models.User, {
+        foreignKey: 'UserId',
+      });
+      Basic.belongsTo(models.Belt, {
+        foreignKey: 'BeltId',
+      });
     }
   }
   Basic.init({
