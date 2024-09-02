@@ -1,0 +1,9 @@
+{
+  "projects": {
+    "default": "dojangpedia1",
+    "deploy": "dojangpedia1"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
+}

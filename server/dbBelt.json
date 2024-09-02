@@ -1,0 +1,44 @@
+    [
+        {
+            "title": "putih",
+            "arti": "Kesucian",
+            "teknik" : "Sikap dasar, tendangan dasar",
+            "descripsi": "Melambangkan awal perjalanan dalam Taekwondo",
+            "imgUrl": "https://i.pinimg.com/originals/8f/9f/9e/8f9f9e8f0b9f9e8f0b9f9e8f0b9f9e8f.jpg"
+        },
+        {
+            "title": "Kuning",
+            "arti": "Bumi",
+            "teknik": "Teknik dasar lanjutan",
+            "descripsi": "Melambangkan akar yang mulai tumbuh",
+            "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ3X3Z3X3Z3X3Z3X3Z3X3Z3X3Z3X3Z3X3Z3X&usqp=CAU"
+        },
+        {
+            "title": "Hijau",
+            "arti": "Pertumbuhan",
+            "teknik": "Pengembangan kekuatan dan teknik",
+            "descripsi": "Melambangkan tanaman yang mulai tumbuh",
+            "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ3X3Z3X3Z3X3Z3X3Z3X3Z3X3Z3X3Z3X3Z3X&usqp=CAU"
+        },
+        {
+            "title": "Biru",
+            "arti": "Langit",
+            "teknik": "Penguasaan teknik yang lebih kompleks",
+            "descripsi": "Melambangkan tanaman yang tumbuh menuju langit",
+            "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ3X3Z3X3Z3X3Z3X3Z3X3Z3X3Z3X3Z3X3Z3X&usqp=CAU"
+        },
+        {
+            "title": "Merah",
+            "arti": "Bahaya",
+            "teknik": "Penguasaan teknik tingkat lanjut",
+            "descripsi": "Melambangkan peringatan dan kontrol diri",
+            "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ3X3Z3X3Z3X3Z3X3Z3X3Z3X3Z3X3Z3X3Z3X&usqp=CAU"
+        },
+        {
+            "title": "Hitam",
+            "arti": "Kebalikan dari putih",
+            "teknik": "Penguasaan seluruh aspek Taekwondo",
+            "descripsi": "Melambangkan kematangan dan penguasaan diri",
+            "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ3X3Z3X3Z3X3Z3X3Z3X3Z3X3Z3X3Z3X3Z3X&usqp=CAU"
+        }
+    ]
