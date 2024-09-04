@@ -116,7 +116,8 @@ describe("ControllerBelt", () => {
 
   test("DELETE /belt/:id - harus menghapus sabuk", async () => {
     const response = await request(app)
-      .delete(`/belt/${belt.id}`); 
+      .delete(`/belt/${belt.id}`)
+      .set('Authorization', `Bearer ${access_token}`);
     expect(response.status).toBe(200);
     expect(response.body.message).toBe("Sabuk berhasil dihapus");
   });
