@@ -1,7 +1,8 @@
 {
   "projects": {
     "default": "dojangpedia1",
-    "deploy": "dojangpedia1"
+    "deploy": "dojangpedia1",
+    "y": "dojangpedia1"
   },
   "targets": {},
   "etags": {},
