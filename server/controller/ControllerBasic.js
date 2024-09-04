@@ -29,7 +29,8 @@ class ControllerBasic{
     static async UpdateBasic(req, res, next) {
         try {
             const { id } = req.params;
-            const [updated] = await Basic.update(req.body, {
+            const { cardTitle, cardText, UserId, BeltId } = req.body;
+            const [updated] = await Basic.update({ cardTitle, cardText, UserId, BeltId }, {
                 where: { id: id }
             });
             if (updated) {

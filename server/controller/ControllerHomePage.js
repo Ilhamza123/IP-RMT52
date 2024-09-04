@@ -28,7 +28,8 @@ class ControllerHomepage {
     static async UpdateHomepage(req, res, next) {
         try {
             const { id } = req.params;
-            const [updated] = await HomePage.update(req.body, {
+            const { title, text } = req.body;
+            const [updated] = await HomePage.update({ title, text }, {
                 where: { id: id }
             });
             if (updated) {
@@ -38,6 +39,7 @@ class ControllerHomepage {
                 next({ name: 'NotFound' });
             }
         } catch (error) {
+            console.error(error); 
             next(error);
         }
     }
