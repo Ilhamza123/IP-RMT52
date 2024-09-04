@@ -62,6 +62,9 @@ const Sabuk = () => {
                                     <Link to={`/editformsabuk/${e.id}`} className="btn btn-primary me-2">
                                         Edit
                                     </Link>
+                                    <Link to={`/updateImageForm/${e.id}`} className="btn btn-info me-2">
+                                        Update Image
+                                    </Link>
                                     <button onClick={() => handleDelete(e.id)} className="btn btn-danger">
                                         Delete
                                     </button>

@@ -6,8 +6,8 @@ const { signToken } = require("../helpers/jwt");
 
 let server;
 let access_token;
-let belt; // Deklarasikan belt di sini
-let user; // Deklarasikan user di sini
+let belt; 
+let user; 
 
 beforeAll(async () => {
   server = app.listen(0);
@@ -34,11 +34,11 @@ beforeAll(async () => {
     },
   ]);
 
-  user = await sequelize.models.User.findOne({ // Simpan user di sini
+  user = await sequelize.models.User.findOne({ 
     where: { email: "penggunauji@contoh.com" },
   });
 
-  belt = await sequelize.models.Belt.findOne({ // Simpan belt di sini
+  belt = await sequelize.models.Belt.findOne({ 
     where: { title: "Sabuk Test" },
   });
   access_token = signToken({ id: user.id, email: user.email });
@@ -65,7 +65,7 @@ describe("ControllerBelt", () => {
   test("GET /belt - harus mengembalikan semua sabuk", async () => {
     const response = await request(app)
       .get("/belt")
-      .set("Authorization", `Bearer ${access_token}`); // Pastikan format token yang Anda kirimkan dalam header Authorization adalah Bearer <token>
+      .set("Authorization", `Bearer ${access_token}`); 
     expect(response.status).toBe(200);
     expect(response.body[0].title).toBe("Sabuk Test");
     expect(response.body[0].arti).toBe("Arti Sabuk Test");

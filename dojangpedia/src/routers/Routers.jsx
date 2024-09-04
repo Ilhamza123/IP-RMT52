@@ -16,6 +16,7 @@ import AddFormSabuk from '../assets/pages/AddFormSabuk';
 import EditFormSabuk from '../assets/component/EditFormSabuk';
 import MainLayout from '../assets/component/MainLayout';
 import { Navigate,redirect } from 'react-router-dom';
+import UpdateImageForm from '../assets/pages/UpdateImageForm';
 
 
 
@@ -131,6 +132,16 @@ const Router = createBrowserRouter([
         }
       },
     ]
+  },
+  {
+    path: 'updateImageForm/:id',
+    element: <UpdateImageForm />,
+    loader: () => {
+      if (!localStorage.access_token) {
+        return redirect('/login');
+      }
+      return null;
+    }
   },
   {
     path: '/login',

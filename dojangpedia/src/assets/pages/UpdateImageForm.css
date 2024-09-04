@@ -1,0 +1,38 @@
+.update-image-form-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8); /* Warna latar belakang */
+    border-radius: 15px; /* Sudut melengkung */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Bayangan */
+    animation: fadeIn 0.5s; /* Animasi masuk */
+    display: flex; /* Menambahkan flexbox */
+    justify-content: center; /* Mengatur konten ke tengah secara horizontal */
+    align-items: center; /* Mengatur konten ke tengah secara vertikal */
+    width: 400px; /* Lebar container */
+    height: 300px; /* Tinggi container */
+}
+
+.update-image-form {
+    width: 350px; /* Lebar form */
+    margin: 0 auto; /* Posisi ke tengah */
+    background-color: rgba(255, 255, 255, 0.5); /* Mengubah warna latar belakang form */
+    padding: 20px; /* Menambahkan padding */
+}
+
+.btn-primary {
+    margin-top: 15px; /* Jarak dari input ke tengah */
+    padding: 10px 20px; /* Menambahkan padding */
+    font-size: 18px; /* Ukuran font */
+}
+
+/* Animasi */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

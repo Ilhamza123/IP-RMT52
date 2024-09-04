@@ -6,8 +6,8 @@ const { signToken } = require("../helpers/jwt");
 
 let server;
 let access_token;
-let homepage; // Deklarasikan homepage di sini
-let user; // Deklarasikan user di sini
+let homepage;
+let user; 
 
 beforeAll(async () => {
   server = app.listen(0);
@@ -22,7 +22,7 @@ beforeAll(async () => {
     },
   ]);
 
-  user = await sequelize.models.User.findOne({ // Simpan user di sini
+  user = await sequelize.models.User.findOne({ 
     where: { email: "penggunauji@contoh.com" },
   });
   access_token = signToken({ id: user.id, email: user.email });
@@ -94,6 +94,6 @@ describe("ControllerHomepage", () => {
             .set('Authorization', `Bearer ${access_token}`);
         expect(response.status).toBe(200);
         expect(response.body.message).toBe("Homepage berhasil dihapus");
-        console.log(response.body); // Tambahkan ini untuk mencetak pesan ke console
+        console.log(response.body); 
     });
 });

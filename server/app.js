@@ -20,6 +20,13 @@ const upload = multer({ storage: storage })
 const ControllerAxiosInstance = require('./controller/ControllerAxiosInstance');
 const cors = require('cors');
 
+// Konfigurasi CORS
+app.use(cors({
+  origin: 'http://localhost:5173', // Ganti dengan origin yang diizinkan
+  methods: ['GET', 'POST', 'PATCH', 'PUT', 'DELETE'], 
+  credentials: true 
+}));
+
 app.patch('/belt/:id',upload.single("spec"),ControllerMulter.Image)
 app.use(express.json());
 // Middleware untuk parsing URL-encoded bodies
