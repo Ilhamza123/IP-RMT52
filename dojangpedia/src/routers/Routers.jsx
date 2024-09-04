@@ -38,26 +38,8 @@ const Router = createBrowserRouter([
           return null
         }
       },
-      {
-        path: 'addFormSabuk',
-        element: <AddFormSabuk />,
-        loader: () => {
-          if (!localStorage.access_token) {
-            return redirect('/login');
-          }
-          return null;
-        }
-      },
-      {
-        path: 'editFormSabuk/:id',
-        element: <EditFormSabuk />,
-        loader: () => {
-          if (!localStorage.access_token) {
-            return redirect('/login');
-          }
-          return null;
-        }
-      },
+      
+      
       {
         path: 'TopRanking',
         element: <TopRankPage />,
@@ -136,6 +118,26 @@ const Router = createBrowserRouter([
   {
     path: 'updateImageForm/:id',
     element: <UpdateImageForm />,
+    loader: () => {
+      if (!localStorage.access_token) {
+        return redirect('/login');
+      }
+      return null;
+    }
+  },
+  {
+    path: 'editFormSabuk/:id',
+    element: <EditFormSabuk />,
+    loader: () => {
+      if (!localStorage.access_token) {
+        return redirect('/login');
+      }
+      return null;
+    }
+  },
+  {
+    path: 'addFormSabuk',
+    element: <AddFormSabuk />,
     loader: () => {
       if (!localStorage.access_token) {
         return redirect('/login');

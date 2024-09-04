@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axiosInstance from '../../config/axiosInstance';
-// impor createSlice redux untuk membuat slice dari state
-// import { createSlice } from 'redux';
+import {jwtDecode} from 'jwt-decode';
 
 const Sabuk = () => {
     const [Tekniks, setTekniks] = useState([]);
     const [error, setError] = useState(null);
+    const [role, setRole] = useState(null);
 
     useEffect(() => {
         const fetchSabukData = async () => {
@@ -19,6 +19,9 @@ const Sabuk = () => {
                     },
                 });
                 setTekniks(Dataku);
+                // Decode access token untuk mendapatkan role
+                const decodedToken = jwtDecode(localStorage.getItem('access_token'));
+                setRole(decodedToken.role);
             } catch (error) {
                 setError("Gagal mengambil data, silakan coba lagi: " + error);
                 console.error('Error mengambil data:', error);
@@ -28,6 +31,10 @@ const Sabuk = () => {
     }, []);
 
     const handleDelete = async (id) => {
+        if (role !== 'admin') {
+            setError("Hanya admin yang dapat menghapus data.");
+            return;
+        }
         try {
             await axiosInstance({
                 url: `/belt/${id}`,
@@ -59,15 +66,19 @@ const Sabuk = () => {
                                 <p><strong>Teknik:</strong> {e.teknik}</p>
                                 <p><strong>Deskripsi:</strong> {e.descripsi}</p>
                                 <div className="d-flex justify-content-end mt-3">
-                                    <Link to={`/editformsabuk/${e.id}`} className="btn btn-primary me-2">
-                                        Edit
-                                    </Link>
-                                    <Link to={`/updateImageForm/${e.id}`} className="btn btn-info me-2">
-                                        Update Image
-                                    </Link>
-                                    <button onClick={() => handleDelete(e.id)} className="btn btn-danger">
-                                        Delete
-                                    </button>
+                                    {role === 'admin' && (
+                                        <>
+                                            <Link to={`/editformsabuk/${e.id}`} className="btn btn-primary me-2">
+                                                Edit
+                                            </Link>
+                                            <Link to={`/updateImageForm/${e.id}`} className="btn btn-info me-2">
+                                                Update Image
+                                            </Link>
+                                            <button onClick={() => handleDelete(e.id)} className="btn btn-danger">
+                                                Delete
+                                            </button>
+                                        </>
+                                    )}
                                 </div>
                             </div>
                         </div>

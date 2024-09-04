@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axiosInstance from '../../config/axiosInstance';
 import { useParams, useNavigate } from 'react-router-dom';
+import '../../assets/component/EdifFormSabuk.css';
 
 const EditFormSabuk = () => {
     const [formData, setFormData] = useState({

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import axiosInstance from '../../config/axiosInstance';
+import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const AddFormSabuk = () => {
     const [formData, setFormData] = useState({
@@ -9,6 +11,8 @@ const AddFormSabuk = () => {
         descripsi: '',
         imgUrl: ''
     });
+
+    const navigate = useNavigate();
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -26,6 +30,16 @@ const AddFormSabuk = () => {
                 data: formData
             });
             setFormData({ title: '', arti: '', teknik: '', descripsi: '', imgUrl: '' });
+            Swal.fire({
+                title: 'Berhasil!',
+                text: 'Data sabuk berhasil ditambahkan.',
+                icon: 'success',
+                confirmButtonText: 'Oke'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    navigate('/belt');
+                }
+            });
         } catch (error) {
             console.error('Error menambahkan data:', error);
             alert('Gagal menambahkan data sabuk');
