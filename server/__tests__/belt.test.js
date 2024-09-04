@@ -62,19 +62,19 @@ afterAll(async () => {
 });
 
 describe("ControllerBelt", () => {
-    
-//   test.only("GET /belt - harus mengembalikan semua sabuk", async () => {
-//     const response = await request(app)
-//       .get("/belt")
-//       .set("Authorization", `Bearer ${access_token}`); // Pastikan format token yang Anda kirimkan dalam header Authorization adalah Bearer <token>
-//     expect(response.status).toBe(200);
-//     expect(response.body[0].title).toBe("Sabuk Test");
-//     expect(response.body[0].arti).toBe("Arti Sabuk Test");
-//     expect(response.body[0].teknik).toBe("Teknik Sabuk Test");
-//     expect(response.body[0].descripsi).toBe("Deskripsi Sabuk Test");
-//     expect(response.body[0].imgUrl).toBe("urlGambarSabukTest.jpg");
-//   });
-  test.only('Berhasil membuat entitas utama', async () => {
+  test("GET /belt - harus mengembalikan semua sabuk", async () => {
+    const response = await request(app)
+      .get("/belt")
+      .set("Authorization", `Bearer ${access_token}`); // Pastikan format token yang Anda kirimkan dalam header Authorization adalah Bearer <token>
+    expect(response.status).toBe(200);
+    expect(response.body[0].title).toBe("Sabuk Test");
+    expect(response.body[0].arti).toBe("Arti Sabuk Test");
+    expect(response.body[0].teknik).toBe("Teknik Sabuk Test");
+    expect(response.body[0].descripsi).toBe("Deskripsi Sabuk Test");
+    expect(response.body[0].imgUrl).toBe("urlGambarSabukTest.jpg");
+  });
+  
+  test('Berhasil membuat entitas utama', async () => {
     const response = await request(app)
       .post('/belt')
       .set('Authorization', `Bearer ${access_token}`)
