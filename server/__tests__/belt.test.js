@@ -104,6 +104,7 @@ describe("ControllerBelt", () => {
     };
     const response = await request(app)
       .put(`/belt/${belt.id}`)
+      .set('Authorization', `Bearer ${access_token}`)
       .send(updatedBelt);
     expect(response.status).toBe(200);
     expect(response.body.title).toBe(updatedBelt.title);
