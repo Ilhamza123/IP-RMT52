@@ -21,15 +21,33 @@ const ControllerAxiosInstance = require('./controller/ControllerAxiosInstance');
 const cors = require('cors');
 
 app.patch('/belt/:id',upload.single("spec"),ControllerMulter.Image)
+app.use(express.json());
+// Middleware untuk parsing URL-encoded bodies
+app.use(express.urlencoded({ extended: true }));
+app.use(cors());
+
+app.use('/', routes);
+// Menggunakan middleware authentication untuk rute yang memerlukan autentikasi
+
+app.get("/", (req, res) => {
+  res.json({
+    message: "server running broo",
+  }); // port 200
+});
+
+// Mengubah response untuk memastikan format JSON yang benar
+app.get("/", (req, res) => {
+  res.status(200).json({ // Menambahkan status 200
+    message: "server running broo",
+  });
+});
+
 
 const authentication = require('./middlewares/authentication');
 const gemini = require('./helpers/gemini');
 
 // Middleware untuk parsing JSON
-app.use(express.json());
-// Middleware untuk parsing URL-encoded bodies
-app.use(express.urlencoded({ extended: true }));
-app.use(cors());
+
 app.post("/Register", Controller.register);
 app.post("/Login", Controller.login);
 
@@ -54,8 +72,6 @@ app.use(authentication)
 
 // Menggunakan routes
 
-app.use('/', routes);
-// Menggunakan middleware authentication untuk rute yang memerlukan autentikasi
 
 
 app.get ('/Homepage',ControllerHomepage.GetHomepage);
