@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axiosInstance from '../../config/axiosInstance';
+import axiosInstance from '../../../dojangpedia/src/config/axiosInstance';
 
 function TeknikDasar() {
     const [Basic, setBasic] = useState([]);

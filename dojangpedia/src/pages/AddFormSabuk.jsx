@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axiosInstance from '../../config/axiosInstance';
+import axiosInstance from '../../../dojangpedia/src/config/axiosInstance';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 

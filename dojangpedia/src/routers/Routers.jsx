@@ -1,22 +1,22 @@
 import { createBrowserRouter } from 'react-router-dom';
-import HomePage from '../assets/pages/HomePage';
-import RegisterUser from '../formregister/RegisterUser';
-import LoginUser from '../formregister/LoginUser';
+import HomePage from '../pages/HomePage';
+import RegisterUser from '../formUser/RegisterUser';
+import LoginUser from '../formUser/LoginUser';
 // import Navbar from '../assets/component/Navbar';
-import LandingPage from '../assets/pages/LandingPage';
+import LandingPage from '../pages/LandingPage';
 // import NavbarBack from '../assets/component/NavbarBack';
-import Sejarah from '../assets/pages/Sejarah';
+import Sejarah from '../pages/Sejarah';
 // import NavbarFooter from '../assets/component/NavbarFooter';
-import TeknikDasar from '../assets/pages/TeknikDasar';
-import Sabuk from '../assets/pages/Sabuk';
-import PoomSae from '../assets/pages/PoomSae';
+import TeknikDasar from '../pages/TeknikDasar';
+import Sabuk from '../pages/Sabuk';
+import PoomSae from '../pages/PoomSae';
 import NavbarBot from '../assets/component/NavbarBot';
-import TopRankPage from '../assets/pages/TopRankPage';
-import AddFormSabuk from '../assets/pages/AddFormSabuk';
+import TopRankPage from '../pages/TopRankPage';
+import AddFormSabuk from '../pages/AddFormSabuk';
 import EditFormSabuk from '../assets/component/EditFormSabuk';
 import MainLayout from '../assets/component/MainLayout';
 import { Navigate,redirect } from 'react-router-dom';
-import UpdateImageForm from '../assets/pages/UpdateImageForm';
+import UpdateImageForm from '../pages/UpdateImageForm';
 
 
 

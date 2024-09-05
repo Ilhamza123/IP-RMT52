@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import axiosInstance from '../../config/axiosInstance';
+import axiosInstance from '../../../dojangpedia/src/config/axiosInstance';
 import {jwtDecode} from 'jwt-decode';
-import '../../assets/pages/Sabuk.css'; 
+import '../../src/pages/Sabuk.css'; 
 
 
 

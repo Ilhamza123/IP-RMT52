@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axiosInstance from '../../config/axiosInstance';
+import axiosInstance from '../../../dojangpedia/src/config/axiosInstance';
 
 function HomePage() {
     const [homeData, setHomeData] = useState([]);

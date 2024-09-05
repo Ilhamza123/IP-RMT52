@@ -1,6 +1,6 @@
     import React, { useState } from 'react';
     import { useParams, useNavigate } from 'react-router-dom';
-    import axiosInstance from '../../config/axiosInstance';
+    import axiosInstance from '../../../dojangpedia/src/config/axiosInstance';
     import '../pages/UpdateImageForm.css';
     import Swal from 'sweetalert2';
 
