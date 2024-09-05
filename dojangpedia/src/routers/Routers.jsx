@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
 import HomePage from '../assets/pages/HomePage';
-import RegisterUser from '../assets/formregister/RegisterUser';
-import LoginUser from '../assets/formregister/LoginUser';
+import RegisterUser from '../formregister/RegisterUser';
+import LoginUser from '../formregister/LoginUser';
 // import Navbar from '../assets/component/Navbar';
 import LandingPage from '../assets/pages/LandingPage';
 // import NavbarBack from '../assets/component/NavbarBack';
@@ -31,12 +31,7 @@ const Router = createBrowserRouter([
       {
         path: '',
         element: <LandingPage />,
-        loader: () => {
-          if(!localStorage.access_token) {
-            return redirect('/login')
-          }
-          return null
-        }
+        
       },
       
       
@@ -116,7 +111,7 @@ const Router = createBrowserRouter([
     ]
   },
   {
-    path: 'updateImageForm/:id',
+    path: '/updateImageForm/:id',
     element: <UpdateImageForm />,
     loader: () => {
       if (!localStorage.access_token) {
@@ -126,7 +121,7 @@ const Router = createBrowserRouter([
     }
   },
   {
-    path: 'editFormSabuk/:id',
+    path: '/editFormSabuk/:id',
     element: <EditFormSabuk />,
     loader: () => {
       if (!localStorage.access_token) {
@@ -136,7 +131,7 @@ const Router = createBrowserRouter([
     }
   },
   {
-    path: 'addFormSabuk',
+    path: '/addFormSabuk',
     element: <AddFormSabuk />,
     loader: () => {
       if (!localStorage.access_token) {

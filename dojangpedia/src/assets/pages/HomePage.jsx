@@ -52,7 +52,7 @@ function HomePage() {
                         <div className="row justify-content-center mx-0">
                             {homeData.map((e, i) => (
                                 <div className="col-md-4 mb-4" key={i}>
-                                    <div className="card shadow-sm h-100">
+                                    <div className="card h-100 shadow" style={{backgroundColor: '#ffffff', padding: '10px', borderRadius: '10px', border: '1px solid #e0e0e0'}}>
                                         <div className="card-body d-flex flex-column">
                                             <h3 className="card-title text-primary mb-auto">{e.title || 'Memuat...'}</h3>
                                             <p className="card-text mt-3">{e.text || 'Memuat...'}</p>
@@ -79,10 +79,10 @@ function HomePage() {
                     </section>
 
                     {/* Berita & Event */}
-                    <section className="news-events-section mt-2 mb-2">
+                        <section className="news-events-section mt-2 mb-2">
                         <div className="row justify-content-center mx-0">           
                             <div className="col-md-6 mb-4 d-flex justify-content-center">
-                                <div className="card shadow-sm h-100 w-100">
+                                <div className="card h-100 shadow" style={{backgroundColor: '#ffffff', padding: '10px', borderRadius: '10px', border: '1px solid #e0e0e0'}}>
                                     <div className="card-body text-center">
                                         <h3 className="card-title text-primary">Berita Terbaru</h3>
                                         <ul className="list-group list-group-flush">
@@ -94,7 +94,7 @@ function HomePage() {
                                 </div>
                             </div>
                             <div className="col-md-6 mb-4 d-flex justify-content-center">
-                                <div className="card shadow-sm h-100 w-100">
+                                <div className="card h-100 shadow" style={{backgroundColor: '#ffffff', padding: '10px', borderRadius: '10px', border: '1px solid #e0e0e0'}}>
                                     <div className="card-body text-center">
                                         <h3 className="card-title text-primary">Kalender Event</h3>
                                         <ul className="list-group list-group-flush">

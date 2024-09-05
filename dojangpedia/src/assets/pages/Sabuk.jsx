@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axiosInstance from '../../config/axiosInstance';
 import {jwtDecode} from 'jwt-decode';
+import '../../assets/pages/Sabuk.css'; 
+
+
 
 const Sabuk = () => {
     const [Tekniks, setTekniks] = useState([]);
@@ -67,7 +70,7 @@ const Sabuk = () => {
                                 <p><strong>Deskripsi:</strong> {e.descripsi}</p>
                                 <div className="d-flex justify-content-end mt-3">
                                     {role === 'admin' && (
-                                        <>
+                                        <div className="btn-group" role="group">
                                             <Link to={`/editformsabuk/${e.id}`} className="btn btn-primary me-2">
                                                 Edit
                                             </Link>
@@ -77,7 +80,7 @@ const Sabuk = () => {
                                             <button onClick={() => handleDelete(e.id)} className="btn btn-danger">
                                                 Delete
                                             </button>
-                                        </>
+                                        </div>
                                     )}
                                 </div>
                             </div>

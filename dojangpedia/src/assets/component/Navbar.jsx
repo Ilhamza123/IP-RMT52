@@ -1,15 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import ButtonLogOut from "./ButtonLogOut";
+import { jwtDecode } from "jwt-decode";
 
 
 
 function Navbar() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [role, setRole] = useState(null);
 
   useEffect(() => {
     const accessToken = localStorage.getItem("access_token");
     setIsLoggedIn(!!accessToken);
+    if (accessToken) {
+      const decodedToken = jwtDecode(accessToken);
+      setRole(decodedToken.role);
+    }
   }, []);
 
   if (!isLoggedIn) {
@@ -18,7 +24,7 @@ function Navbar() {
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
             <img
-              src="/src/assets/pages/assets/taekwondo.png"
+              src="/assets/taekwondo.png"
               width="30"
               height="30"
               className="d-inline-block align-top"
@@ -27,7 +33,7 @@ function Navbar() {
             />
             DojangPedia
             <img
-              src="/src/assets/pages/assets/taekwondo1.png"
+              src="/assets/taekwondo1.png"
               width="30"
               height="30"
               className="d-inline-block align-top"
@@ -53,7 +59,7 @@ function Navbar() {
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
             <img
-              src="/src/assets/pages/assets/taekwondo.png"
+              src="/assets/taekwondo.png"
               width="30"
               height="30"
               className="d-inline-block align-top"
@@ -62,7 +68,7 @@ function Navbar() {
             />
             DojangPedia
             <img
-              src="/src/assets/pages/assets/taekwondo1.png"
+              src="/assets/taekwondo1.png"
               width="30"
               height="30"
               className="d-inline-block align-top"
@@ -115,11 +121,13 @@ function Navbar() {
                       Sabuk
                     </Link>
                   </li>
-                  <li>
-                    <Link className="dropdown-item" to="/addFormSabuk">
-                      Tambah Sabuk
-                    </Link>
-                  </li>
+                  {role !== 'user' && (
+                    <li>
+                      <Link className="dropdown-item" to="/addFormSabuk">
+                        Tambah Sabuk
+                      </Link>
+                    </li>
+                  )}
                 </ul>
               </li>
               <li className="nav-item">

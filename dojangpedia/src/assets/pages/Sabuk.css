@@ -1,0 +1,66 @@
+.card {
+    border: none; /* Menghilangkan border default */
+    border-radius: 10px; /* Sudut yang lebih halus */
+    transition: transform 0.2s; /* Efek transisi saat hover */
+    width: 100%; /* Menyesuaikan ukuran card untuk samakan semua */
+    margin: auto; /* Menyesuaikan posisi card */
+    
+}
+
+.card:hover {
+    transform: scale(1.05); /* Membesarkan card saat hover */
+}
+
+.card-header {
+    background-color: #000000; /* Warna latar belakang header */
+    color: white; /* Warna teks header */
+    border-top-left-radius: 10px; /* Sudut yang lebih halus di kiri atas */
+    border-top-right-radius: 10px; /* Sudut yang lebih halus di kanan atas */
+}
+
+.btn {
+    border-radius: 5px; /* Sudut tombol yang lebih halus */
+    padding: 10px 15px; /* Padding tombol */
+    display: block; /* Menampilkan tombol secara block untuk mengatur posisi */
+    margin: auto; /* Mengatur posisi tombol di tengah bawah */
+    text-align: center; /* Mengatur teks tombol di tengah */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Warna tombol edit */
+    border: none; /* Menghilangkan border */
+}
+
+.btn-info {
+    background-color: #17a2b8; /* Warna tombol update */
+    border: none; /* Menghilangkan border */
+}
+
+.btn-danger {
+    background-color: #dc3545; /* Warna tombol delete */
+    border: none; /* Menghilangkan border */
+}
+
+.btn:hover {
+    opacity: 0.9; /* Efek transparansi saat hover */
+}
+
+/* Mengatur posisi tombol di tengah bawah */
+.card-body .btn {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.text-center.mb-5.text-primary {
+    font-size: 2.5rem; /* Ukuran font yang lebih besar untuk judul */
+    color: #007bff; /* Warna teks yang sesuai dengan tema */
+    margin-bottom: 3rem; /* Margin bawah yang lebih besar untuk memberikan jarak */
+    margin-top: 30px; /* Menambahkan margin atas untuk menghindari nabrak dengan navigasi */
+}
+.card-img-top {
+    width: 100%; /* Menyesuaikan lebar gambar dengan lebar kartu */
+    height: 200px; /* Menyesuaikan tinggi gambar menjadi 200px untuk semua gambar */
+    border-radius: 10px; /* Menambahkan sudut yang lebih halus pada gambar */
+    object-fit: cover; /* Menyesuaikan gambar agar terlihat gepeng */
+}

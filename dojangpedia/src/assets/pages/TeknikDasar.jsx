@@ -47,8 +47,8 @@ function TeknikDasar() {
                 <div className="row justify-content-center">
                     {Basic.map((e, i) => (
                         <div className="col-lg-3 mb-4" key={i}>
-                            <div className="card h-100">
-                                <div className="card-body">
+                           
+                                <div className="card-body"> <div className="card h-100 shadow" style={{backgroundColor: '#ffffff', padding: '10px', borderRadius: '10px', border: '1px solid #e0e0e0'}}>
                                     <h3 className="card-title">{e.cardTitle}</h3>
                                     <p className="card-text">{e.cardText}</p>
                                 </div>
@@ -63,7 +63,7 @@ function TeknikDasar() {
                 <div className="row justify-content-center">
                     {teknikDasar.map((e, i) => (
                         <div className="col-lg-3 mb-4" key={i}>
-                            <div className="card h-100">
+                            <div className="card h-100 shadow" style={{backgroundColor: '#ffffff', padding: '10px', borderRadius: '10px', border: '1px solid #e0e0e0'}}>
                                 <div className="card-body">
                                     <h3 className="card-title">{e.cardTitle}</h3>
                                     <p>

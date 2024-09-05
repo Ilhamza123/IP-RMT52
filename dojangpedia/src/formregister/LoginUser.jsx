@@ -125,7 +125,7 @@ function LoginUser() {
               </div>
             </div>
             <div className="col-md-4 d-flex justify-content-center align-items-center">
-              <img src="/assets/taekwondo1.png" alt="Taekwondo1" className="img-fluid" style={{width: '1000px'}} />
+              <img src="/assets/taekwondo1.png" alt="Taekwondo" className="img-fluid" style={{width: '1000px'}} />
             </div>
           </div>
         </div>

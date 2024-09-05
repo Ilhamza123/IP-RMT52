@@ -16,7 +16,7 @@ function Sejarah() {
                     
                         <div className="row mt-3 mx-0">
                             <div className="col-md-6 mb-4">
-                                <div className="card shadow-sm h-100">
+                                <div className="card h-100 shadow" style={{backgroundColor: '#ffffff', padding: '10px', borderRadius: '10px', border: '1px solid #e0e0e0'}}>
                                     <div className="card-body">
                                         <h3 className="card-title text-primary">1. ITF (International Taekwon-Do Federation)</h3>
                                         <ul className="list-group list-group-flush">
@@ -30,7 +30,7 @@ function Sejarah() {
                             </div>
                         
                             <div className="col-md-6 mb-4">
-                                <div className="card shadow-sm h-100">
+                                <div className="card h-100 shadow" style={{backgroundColor: '#ffffff', padding: '10px', borderRadius: '10px', border: '1px solid #e0e0e0'}}>
                                     <div className="card-body">
                                         <h3 className="card-title text-primary">2. WT (World Taekwondo)</h3>
                                         <ul className="list-group list-group-flush">

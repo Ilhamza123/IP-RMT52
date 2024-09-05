@@ -137,13 +137,15 @@ const NavbarBot = () => {
               value={userInput}
               onChange={handleUserInput}
               onKeyPress={(e) => e.key === 'Enter' && sendMessage()}
-              placeholder="Ketik pesan..."
+              placeholder="Ketik pesan....."
               style={{
                 flex: 1,
                 marginRight: '10px',
                 padding: '5px',
                 borderRadius: '5px',
-                border: '1px solid #ccc'
+                border: '1px solid #ccc',
+                backgroundColor: '#f0f0f0',
+                color: 'black'
               }}
             />
             <button onClick={sendMessage} style={{
