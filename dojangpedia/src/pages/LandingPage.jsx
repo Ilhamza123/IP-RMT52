@@ -54,7 +54,7 @@ function LandingPage() {
                 <div className="col-12 text-center">
                     <h2 className="display-4 fw-bold mb-4" style={{ color: '#333' }}>Mulai Perjalanan Taekwondo Anda</h2>
                     <p className="lead mb-4" style={{ color: '#555' }}>Bergabunglah dengan komunitas kami dan tingkatkan keterampilan bela diri Anda.</p>
-                    <Link to="/homepage" className="btn btn-primary btn-lg shadow-lg rounded-pill px-4 py-2 fw-bold text-uppercase" style={{ transition: 'all 0.3s' }}>
+                    <Link to="/homepage" className="btn btn-primary btn-lg shadow-lg rounded-pill px-4 py-2 fw-bold text-uppercase" style={{ transition: 'all 0.3s' }} onClick={() => window.scrollTo(0, 0)}>
                         Jelajahi Sekarang
                     </Link>
                 </div>
