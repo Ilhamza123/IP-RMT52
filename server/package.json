@@ -5,7 +5,7 @@
   "scripts": {
     
     
-    "test": "jest --coverageDirectory=coverage --detectOpenHandles --forceExit --runInBand ",
+    "test": "jest --coverage --detectOpenHandles --forceExit --runInBand ",
     "testbelt": "jest --coverageDirectory=coverage --detectOpenHandles --forceExit --runInBand belt.test",
     "testhome": "jest --coverageDirectory=coverage --detectOpenHandles --forceExit --runInBand homepage.test",
     "testbasic": "jest --coverageDirectory=coverage --detectOpenHandles --forceExit --runInBand basic.test",

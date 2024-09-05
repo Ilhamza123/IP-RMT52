@@ -45,7 +45,7 @@ class Controller {
       }
 
       // console.log("token :", access_token);
-      const access_token = signToken({ id: user.id, email: user.email });
+      const access_token = signToken({ id: user.id, email: user.email, role: user.role });
       res.status(200).json({ access_token });
     } catch (error) {
       // console.log(error, "<<<<<<<<<<");
@@ -82,7 +82,7 @@ class Controller {
       // If the request specified a Google Workspace domain:
       // const domain = payload['hd'];
       // console.log(req.body);
-      const access_token = signToken({ id: user.id, email: user.email });
+      const access_token = signToken({ id: user.id, email: user.email, role: user.role });
       res.status(200).json({ access_token });
     } catch (error) {
       console.log(error);
