@@ -1,8 +1,5 @@
-
-
-
 function errorHandler(err, req, res, next) {
-  console.error(err);
+  console.error(err.stack ? err.stack : err); // Menambahkan pemeriksaan untuk err.stack
 
   let status = 500;
   let message = "Terjadi kesalahan internal server";

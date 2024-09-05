@@ -9,6 +9,7 @@
     "testbelt": "jest --coverageDirectory=coverage --detectOpenHandles --forceExit --runInBand belt.test",
     "testhome": "jest --coverageDirectory=coverage --detectOpenHandles --forceExit --runInBand homepage.test",
     "testbasic": "jest --coverageDirectory=coverage --detectOpenHandles --forceExit --runInBand basic.test",
+    "testlogin": "jest --coverageDirectory=coverage --detectOpenHandles --forceExit --runInBand login.test",
     "start": "node --watch bin/www",
     "setup": "npx sequelize db:drop && npx sequelize db:create && npx sequelize db:migrate && npx sequelize db:seed:all"
   },

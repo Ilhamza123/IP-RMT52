@@ -20,9 +20,9 @@ class Controller {
       });
       res.status(201).json({ newUser });
     } catch (error) {
-      console.log(error, "<<<< error sebelum daftar");
-      res.status(500).json({ name: "error server" });
-    }
+      console.error("Error in login:", error); 
+      next(error);
+  }
   }
 
   static async login(req, res, next) {
