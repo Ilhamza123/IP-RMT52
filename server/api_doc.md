@@ -1,60 +1,33 @@
 # DojangPedia API Documentation
 
-## Models :
+## Models:
 
-tabel_User
-- username : string (required)
-- email : string, unique (required)
-- password : string (required)
-- beltId : integer (foreign key ke tabel belt)
+### tabel_User
+- username: string (required)
+- email: string, unique (required)
+- password: string (required)
+- beltId: integer (foreign key ke tabel belt)
 
-### > /homepage
+### tabel_Homepage
+- title: string (required)
+- text: string
 
-tabel_Homepage 
-- title : string (required)
-- text : string
+### tabel_belt
+- title: string
+- arti: string
+- teknik: string
+- descripsi: string
 
-### > /belt
-tabel belt
-- title : string 
-- arti : string
-- teknik : string
-- descripsi : string
+### tabel_basic
+- userId: integer (foreign key ke tabel_User)
+- beltId: integer (foreign key ke tabel belt)
+- cardTitle: string
+- cardText: string
 
-### > /basic
-tabel basic
-- userId : integer (foreign key ke tabel_User)
-- beltId : integer (foreign key ke tabel belt)
-- cardTitle : string
-- cardText : string
-
-tabel detail_teknik
-- basicId : integer (foreign key ke tabel basic)
-- cardTitle : string
-- cardText : string
-
-### Relasi:
-=//> 1 User hanya bisa memiliki 1 Belt, tapi 1 Belt bisa dimiliki banyak User
-=//> 1 User bisa membuat banyak Homepage, tapi 1 Homepage hanya dimiliki oleh 1 User
-=//> 1 User bisa membuat banyak Basic Taekwondo, tapi 1 Basic Taekwondo hanya dibuat oleh 1 User
-=//> 1 Belt bisa memiliki banyak Basic Taekwondo, tapi 1 Basic Taekwondo hanya terkait dengan 1 Belt
-
-=//> 1 Basic Taekwondo bisa memiliki banyak Detail Teknik, tapi 1 Detail Teknik hanya terkait dengan 1 Basic Taekwondo
-
-
-<!-- ### Penjelasan Relasi:
-1. User - Belt: Satu User memiliki satu Belt (One-to-One)
-   - Tambahkan field 'beltId' ke tabel_User sebagai foreign key ke tabel belt
-
-3. User - Basic: Satu User bisa membuat banyak Basic Taekwondo (One-to-Many)
-   - Field 'userId' di tabel basic sebagai foreign key ke tabel_User
-
-4. Belt - Basic: Satu Belt bisa memiliki banyak Basic Taekwondo (One-to-Many)
-   - Field 'beltId' di tabel basic sebagai foreign key ke tabel belt
-
-5. Basic - Detail Teknik: Satu Basic Taekwondo bisa memiliki banyak Detail Teknik (One-to-Many)
-   - Field 'basicId' di tabel detail_teknik sebagai foreign key ke tabel basic -->
-
+### tabel_detail_teknik
+- basicId: integer (foreign key ke tabel basic)
+- cardTitle: string
+- cardText: string
 
 ## Endpoints
 
@@ -122,14 +95,180 @@ tabel detail_teknik
     }
     ```
 
-## Error Responses
+### 4. Get Homepage
+- **URL**: `/homepage`
+- **Method**: GET
+- **Description**: Mengambil semua homepage
+- **Response**:
+  - Status: 200 OK
+  - Body:
+    ```json
+    [
+      {
+        "title": "string",
+        "text": "string"
+      }
+    ]
+    ```
 
+### 5. Create Homepage
+- **URL**: `/homepage`
+- **Method**: POST
+- **Description**: Membuat homepage baru
+- **Request Body**:
+  ```json
+  {
+    "title": "string",
+    "text": "string"
+  }
+  ```
+- **Response**:
+  - Status: 201 Created
+  - Body:
+    ```json
+    {
+      "id": "integer",
+      "title": "string",
+      "text": "string"
+    }
+    ```
+
+### 6. Get Belt
+- **URL**: `/belt`
+- **Method**: GET
+- **Description**: Mengambil semua sabuk
+- **Response**:
+  - Status: 200 OK
+  - Body:
+    ```json
+    [
+      {
+        "title": "string",
+        "arti": "string",
+        "teknik": "string",
+        "descripsi": "string"
+      }
+    ]
+    ```
+
+### 7. Create Belt
+- **URL**: `/belt`
+- **Method**: POST
+- **Description**: Membuat sabuk baru
+- **Request Body**:
+  ```json
+  {
+    "title": "string",
+    "arti": "string",
+    "teknik": "string",
+    "descripsi": "string"
+  }
+  ```
+- **Response**:
+  - Status: 201 Created
+  - Body:
+    ```json
+    {
+      "id": "integer",
+      "title": "string",
+      "arti": "string",
+      "teknik": "string",
+      "descripsi": "string"
+    }
+    ```
+
+### 8. Get Basic
+- **URL**: `/basic`
+- **Method**: GET
+- **Description**: Mengambil semua basic
+- **Response**:
+  - Status: 200 OK
+  - Body:
+    ```json
+    [
+      {
+        "cardTitle": "string",
+        "cardText": "string",
+        "UserId": "integer",
+        "BeltId": "integer"
+      }
+    ]
+    ```
+
+### 9. Create Basic
+- **URL**: `/basic`
+- **Method**: POST
+- **Description**: Membuat basic baru
+- **Request Body**:
+  ```json
+  {
+    "cardTitle": "string",
+    "cardText": "string",
+    "UserId": "integer",
+    "BeltId": "integer"
+  }
+  ```
+- **Response**:
+  - Status: 201 Created
+  - Body:
+    ```json
+    {
+      "id": "integer",
+      "cardTitle": "string",
+      "cardText": "string",
+      "UserId": "integer",
+      "BeltId": "integer"
+    }
+    ```
+
+### 10. Get Detail Teknik
+- **URL**: `/detailteknik`
+- **Method**: GET
+- **Description**: Mengambil semua detail teknik
+- **Response**:
+  - Status: 200 OK
+  - Body:
+    ```json
+    [
+      {
+        "cardTitle": "string",
+        "cardText": "string",
+        "BasicId": "integer"
+      }
+    ]
+    ```
+
+### 11. Create Detail Teknik
+- **URL**: `/detailteknik`
+- **Method**: POST
+- **Description**: Membuat detail teknik baru
+- **Request Body**:
+  ```json
+  {
+    "cardTitle": "string",
+    "cardText": "string",
+    "BasicId": "integer"
+  }
+  ```
+- **Response**:
+  - Status: 201 Created
+  - Body:
+    ```json
+    {
+      "id": "integer",
+      "cardTitle": "string",
+      "cardText": "string",
+      "BasicId": "integer"
+    }
+    ```
+
+## Error Responses
 ### 1. Validation Error
 - **Status**: 400 Bad Request
 - **Body**:
   ```json
   {
-    "message": "Pesan validasi "
+    "message": "Pesan validasi"
   }
   ```
 
@@ -203,6 +342,7 @@ tabel detail_teknik
   {
     "message": "Terjadi kesalahan internal server"
   }
+  ```
 
 ### 10. Belt not found
 - **Status**: 404 Not Found

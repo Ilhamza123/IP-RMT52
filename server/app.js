@@ -22,7 +22,7 @@ const cors = require('cors');
 
 // Konfigurasi CORS
 app.use(cors({
-  origin: 'http://localhost:5173', // Ganti dengan origin yang diizinkan
+  origin: ['http://localhost:5173', 'https://dojangpedia1.web.app'], // Tambahkan origin yang diizinkan
   methods: ['GET', 'POST', 'PATCH', 'PUT', 'DELETE'], 
   credentials: true 
 }));
