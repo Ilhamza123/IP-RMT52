@@ -1,0 +1,22 @@
+[
+    {
+        "cardTitle": "Kuda-Kuda",
+        "cardText": "Charyot Sogi (Berdiri Siku) Joonbi Sogi (Kuda-kuda Siap)",
+        "BasicId": 1
+    },
+    {
+        "cardTitle": "Tendangan",
+        "cardText": "Ap Chagi (Tendangan Depan)Dollyo Chagi (Tendangan Melingkar)",
+        "BasicId": 2
+    },
+    {
+        "cardTitle": "Pukulan",
+        "cardText": "Jireugi (Pukulan Lurus) Tzirugi (Pukulan Melingkar)",
+        "BasicId": 3
+    },
+    {
+        "cardTitle": "Blok",
+        "cardText": "Makki (Blok Lengan)",
+        "BasicId": 4
+    }
+]

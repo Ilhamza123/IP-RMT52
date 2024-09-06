@@ -1,0 +1,26 @@
+[
+    {
+        "cardTitle": "Poomsae",
+        "cardText": "Penjelasan tentang pola dasar yang harus diikuti.",
+        "UserId": 1,
+        "BeltId": 1
+    },
+    {
+        "cardTitle": "Kyorugi",
+        "cardText": "Teknik dasar sparring.",
+        "UserId": 1,
+        "BeltId": 1
+    },
+    {
+        "cardTitle": "Gyokpa",
+        "cardText": "Teknik memecahkan papan atau benda keras.",
+        "UserId": 1,
+        "BeltId": 1
+    },
+    {
+        "cardTitle": "Hosinsul",
+        "cardText": "Teknik dasar pertahanan diri.",
+        "UserId": 1,
+        "BeltId": 1
+    }
+]

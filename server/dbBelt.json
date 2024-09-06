@@ -1,0 +1,44 @@
+    [
+        {
+            "title": "putih",
+            "arti": "Kesucian",
+            "teknik" : "Sikap dasar, tendangan dasar",
+            "descripsi": "Melambangkan awal perjalanan dalam Taekwondo",
+            "imgUrl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//107/MTA-52551899/frasser_sabuk-karate-tebal-frasser-putih_full01.jpg"
+        },
+        {
+            "title": "Kuning",
+            "arti": "Bumi",
+            "teknik": "Teknik dasar lanjutan",
+            "descripsi": "Melambangkan akar yang mulai tumbuh",
+            "imgUrl": "https://sc04.alicdn.com/kf/H2f199897ade54485bc6882a5de95ecaca.jpg    "
+        },
+        {
+            "title": "Hijau",
+            "arti": "Pertumbuhan",
+            "teknik": "Pengembangan kekuatan dan teknik",
+            "descripsi": "Melambangkan tanaman yang mulai tumbuh",
+            "imgUrl": "https://images.tokopedia.net/img/cache/700/VqbcmM/2022/3/25/2e574419-dc9b-4414-aa2b-c9800e8a567a.jpg"
+        },
+        {
+            "title": "Biru",
+            "arti": "Langit",
+            "teknik": "Penguasaan teknik yang lebih kompleks",
+            "descripsi": "Melambangkan tanaman yang tumbuh menuju langit",
+            "imgUrl": "https://images.tokopedia.net/img/cache/500-square/VqbcmM/2022/3/25/59a62497-4506-4c0f-b892-60716b9a2e7a.jpg"
+        },
+        {
+            "title": "Merah",
+            "arti": "Bahaya",
+            "teknik": "Penguasaan teknik tingkat lanjut",
+            "descripsi": "Melambangkan peringatan dan kontrol diri",
+            "imgUrl": "https://sc04.alicdn.com/kf/HTB1xZ9LfTTI8KJjSsphq6AFppXax.jpg"
+        },
+        {
+            "title": "Hitam",
+            "arti": "Kebalikan dari putih",
+            "teknik": "Penguasaan seluruh aspek Taekwondo",
+            "descripsi": "Melambangkan kematangan dan penguasaan diri",
+            "imgUrl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//101/MTA-59203585/oem_oem_full01.jpg"
+        }
+    ]

@@ -1,0 +1,58 @@
+body {
+    display: flex; /* Menggunakan flexbox */
+    justify-content: center; /* Memusatkan konten secara horizontal */
+    align-items: center; /* Memusatkan konten secara vertikal */
+    height: 100vh; /* Mengatur tinggi body agar memenuhi layar */
+    margin: 0; /* Menghilangkan margin default */
+    flex-direction: row; /* Mengubah arah flex menjadi baris */
+    font-family: sans-serif; /* Mengubah font menjadi sans */
+}
+
+.container {
+    width: 100%; /* Mengatur lebar kontainer menjadi 100% */
+    max-width: 1200px; /* Mengubah lebar maksimum kontainer agar lebih lebar */
+    margin: 0 auto; /* Memusatkan kontainer */
+    padding: 20px; /* Menambahkan padding */    
+    border: 1px solid #ccc; /* Menambahkan border */
+    border-radius: 5px; /* Membulatkan sudut */
+    background-color: #f9f9f9; /* Warna latar belakang */
+    width: auto; /* Mengatur lebar kontainer menjadi otomatis */
+    font-family: sans-serif; /* Mengubah font menjadi sans */
+}
+
+h2 {
+    text-align: center; /* Memusatkan teks judul */
+    color: #333; /* Warna teks judul */
+    font-family: sans-serif; /* Mengubah font menjadi sans */
+}
+
+.mb-3 {
+    margin-bottom: 15px; /* Jarak bawah untuk elemen */
+}
+
+.form-label {
+    font-weight: bold; /* Menebalkan label */
+    font-family: sans-serif; /* Mengubah font menjadi sans */
+}
+
+.form-control {
+    border: 1px solid #ccc; /* Border untuk input */
+    border-radius: 4px; /* Membulatkan sudut input */
+    padding: 10px; /* Padding dalam input */
+    width: 100%; /* Lebar penuh */
+    font-family: sans-serif; /* Mengubah font menjadi sans */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Warna latar belakang tombol */
+    color: white; /* Warna teks tombol */
+    border: none; /* Menghilangkan border */
+    padding: 10px 15px; /* Padding tombol */
+    border-radius: 4px; /* Membulatkan sudut tombol */
+    cursor: pointer; /* Menunjukkan kursor pointer */
+    font-family: sans-serif; /* Mengubah font menjadi sans */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Warna latar belakang saat hover */
+}
